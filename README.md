@@ -1,20 +1,3 @@
-# IDS_on_CPS
-
-This repo was created with the intention of documenting every step for this project
-
-## Environment setup
-
-In order to set the environment, we need to install a few thing on ubuntu
-- set chmod +x setup_cps_lab.sh
-- run the script setup_cps_lab.sh as sudo ./setup_cps_lab.sh
-
-After everything is setup, try the following commands to verify it is working:
-To show all network namespaces:
-- ip netns list or ls -l /var/run/netns
-
-Show all host network interfaces (including bridge + veth host sides):
-- ip link show or ip -d link show
-
 # CPS IDS Lab — Single-VM (Network Namespace) Guide
 
 A compact, copy-pasteable guide for setting up a CPS (OpenPLC/Modbus) lab inside **one Ubuntu 22.04 VM** using Linux network namespaces.
@@ -228,16 +211,4 @@ done
 
 ---
 
-## Next steps
-
-* **A — OpenPLC install**: replace the Python simulator with the OpenPLC runtime inside the `plc` namespace.
-* **B — Node-RED flow**: importable Node-RED flow JSON that polls registers and displays a simple tank/pump dashboard.
-* **C — Suricata rules & tests**: comprehensive Modbus ruleset (reads/writes, suspicious function codes, replay detection).
-* **D — Docker-compose variant**: same network topology via Docker containers.
-
----
-
-## License & attribution
-
-You may copy or modify this documentation and the included scripts for your project. If used in reports or publications, please attribute the lab templates to your team and include notes about changes you made.
 
